@@ -1,10 +1,10 @@
  #include <stdio.h>
 
 int main() {
-    int contador = 10;  // Variável de controle para a contagem regressiva
+    int contador = 10; 
 
     while (contador >= 0) {
-        printf("%d\n", contador);  // Mostrar o número na tela
+        printf("%d\n", contador); 
         contador--; 
 
     printf("FIM!\n");  
