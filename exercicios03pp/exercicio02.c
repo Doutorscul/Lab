@@ -1,27 +1,27 @@
 #include <stdio.h>
 
 int main() {
-    int i;  // Variável de controle para o loop
+    int i; 
 
     printf("Usando o loop for:\n");
     for (i = 1; i <= 100; i++) {
-        printf("%d ", i);  // Escrever o número na tela
+        printf("%d ", i);  
     }
     printf("\n");
 
     printf("\nUsando o loop while:\n");
-    i = 1;  // Reiniciar a variável de controle para o loop
+    i = 1; 
     while (i <= 100) {
-        printf("%d ", i);  // Escrever o número na tela
-        i++;  // Avançar para o próximo número
+        printf("%d ", i); 
+        i++; 
     }
     printf("\n");
 
     printf("\nUsando o loop do-while:\n");
-    i = 1;  // Reiniciar a variável de controle para o loop
+    i = 1; 
     do {
-        printf("%d ", i);  // Escrever o número na tela
-        i++;  // Avançar para o próximo número
+        printf("%d ", i); 
+        i++; 
     } while (i <= 100);
 
     return 0;
