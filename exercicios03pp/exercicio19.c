@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    int valor_saque; // valor do saque
-    int notas_100 = 0, notas_50 = 0, notas_20 = 0, notas_10 = 0, notas_5 = 0, notas_2 = 0, notas_1 = 0; // contador de notas de cada valor
+    int valor_saque; 
+    int notas_100 = 0, notas_50 = 0, notas_20 = 0, notas_10 = 0, notas_5 = 0, notas_2 = 0, notas_1 = 0;
 
-    // Solicitar o valor do saque ao usuário
+    
     printf("Digite o valor do saque em reais: ");
     scanf("%d", &valor_saque);
 
-    // Calcular a quantidade mínima de notas de cada valor
+  
     while (valor_saque > 0) {
         if (valor_saque >= 100) {
             notas_100++;
@@ -34,7 +34,7 @@ int main() {
         }
     }
 
-    // Imprimir a quantidade de notas de cada valor
+    
     printf("Quantidade de notas:\n");
     printf("Notas de 100: %d\n", notas_100);
     printf("Notas de 50: %d\n", notas_50);
