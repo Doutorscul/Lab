@@ -3,19 +3,17 @@
 #include <time.h>
 
 int main() {
-    int n; // número de vezes que os dados serão lançados
-    int d1, d2; // valores dos dados
-    int i; // contador do loop
+    int n; 
+    int d1, d2; 
+    int i;
 
-    // Semente para geração de números aleatórios baseada no tempo atual
     srand(time(0));
 
     printf("Digite o número de vezes que os dados serão lançados: ");
     scanf("%d", &n);
 
     printf("Resultado dos lançamentos:\n");
-    for (i = 0; i < n; i++) {
-        // Gerando valores aleatórios para os dados (entre 1 e 6)
+    for (i = 0; i < n; i++) {
         d1 = rand() % 6 + 1;
         d2 = rand() % 6 + 1;
 
