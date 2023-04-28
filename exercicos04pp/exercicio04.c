@@ -1,4 +1,4 @@
-4- #include <stdio.h>
+ #include <stdio.h>
 
 int main() {
     int contador = 0; 
