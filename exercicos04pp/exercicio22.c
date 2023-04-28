@@ -1,4 +1,4 @@
-**Questão 23***
+**Questão 23**
 
 #include <stdio.h>
 
