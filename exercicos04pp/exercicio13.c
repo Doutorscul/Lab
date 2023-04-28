@@ -1,4 +1,4 @@
-l#include <stdio.h>
+#include <stdio.h>
 
 float calculadora(float num1, float num2, char operador) {
     float resultado;
