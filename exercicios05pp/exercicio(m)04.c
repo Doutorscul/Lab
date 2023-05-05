@@ -1,37 +1,53 @@
 #include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+#define MAX 100
 
 int main() {
-    int matriz[5][5], x, linha = -1, coluna = -1, i, j;
+    char palavra[MAX];
+    char substituto;
+    int i, vogais = 0, tam;
     
-    printf("Digite os elementos da matriz 5x5:\n");
-    for (i = 0; i < 5; i++) {
-        for (j = 0; j < 5; j++) {
-            scanf("%d", &matriz[i][j]);
-        }
-    }
-   
-    printf("Digite o valor a ser procurado: ");
-    scanf("%d", &x);
+    printf("Digite uma palavra: ");
+    scanf("%s", palavra);
     
-    for (i = 0; i < 5; i++) {
-        for (j = 0; j < 5; j++) {
-            if (matriz[i][j] == x) {
-                linha = i;
-                coluna = j;
+    tam = strlen(palavra);
+    
+    for (i = 0; i < tam; i++) {
+        switch(tolower(palavra[i])) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                vogais++;
+                palavra[i] = substituto;
                 break;
-            }
-        }
-        if (linha != -1 && coluna != -1) {
-            break;
+            default:
+                break;
         }
     }
     
+    printf("A palavra tem %d vogais.\n", vogais);
+    printf("Digite um caractere para substituir as vogais: ");
+    scanf(" %c", &substituto);
     
-    if (linha != -1 && coluna != -1) {
-        printf("O valor %d foi encontrado na linha %d e coluna %d.", x, linha, coluna);
-    } else {
-        printf("O valor %d não foi encontrado na matriz.", x);
+    for (i = 0; i < tam; i++) {
+        switch(tolower(palavra[i])) {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                palavra[i] = substituto;
+                break;
+            default:
+                break;
+        }
     }
+    
+    printf("Palavra com vogais substituidas: %s\n", palavra);
     
     return 0;
 }
