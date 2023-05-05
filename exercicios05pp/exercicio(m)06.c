@@ -1,43 +1,20 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-#define N 4
+#include <string.h>
 
 int main() {
-    int matriz[N][N];
-    int i, j;
-    
-    srand(time(NULL));
-    
+    char palavra[50];
+    int i;
 
-    for (i = 0; i < N; i++) {
-        for (j = 0; j < N; j++) {
-            matriz[i][j] = rand() % 20 + 1;
+    printf("Digite uma palavra: ");
+    scanf("%s", palavra);
+
+    for (i = 0; i < strlen(palavra); i++) {
+        if (palavra[i] >= 97 && palavra[i] <= 122) {  
+            palavra[i] = palavra[i] - 32; 
         }
     }
-    
-    printf("Matriz original:\n");
-    for (i = 0; i < N; i++) {
-        for (j = 0; j < N; j++) {
-            printf("%3d ", matriz[i][j]);
-        }
-        printf("\n");
-    }
-    
-    for (i = 0; i < N; i++) {
-        for (j = i + 1; j < N; j++) {
-            matriz[i][j] = 0;
-        }
-    }
-    
-    printf("\nMatriz transformada:\n");
-    for (i = 0; i < N; i++) {
-        for (j = 0; j < N; j++) {
-            printf("%3d ", matriz[i][j]);
-        }
-        printf("\n");
-    }
-    
+
+    printf("A palavra em letras maiusculas e: %s\n", palavra);
+
     return 0;
 }
