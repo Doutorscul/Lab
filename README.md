@@ -1,2 +1,2 @@
 
-lab05_arrays_strings
+Lab06 structs
