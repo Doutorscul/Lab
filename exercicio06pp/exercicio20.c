@@ -27,7 +27,7 @@ int calcularDiasDecorridos(struct dma data1, struct dma data2) {
 
     if (data1.ano < data2.ano || (data1.ano == data2.ano && data1.mes < data2.mes) || (data1.ano == data2.ano && data1.mes == data2.mes && data1.dia < data2.dia)) {
         struct dma temp = data1;
-        data1 = data2;
+        data1 = daata2;
         data2 = temp;
     }
     while (data1.dia != data2.dia || data1.mes != data2.mes || data1.ano != data2.ano) {
